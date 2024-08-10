@@ -656,5 +656,35 @@ const products = [
       "apparel",
       "mens"
     ]
+  },
+  {
+    id: "id1",
+    image: "images/products/backpack.jpg",
+    name: "Dola's Magic Backpack",
+    rating: {
+      stars: 5,
+      count: 6666
+    },
+    priceCents: 6666,
+    keywords: [
+      "backpack",
+      "magic",
+      "dola"
+    ]
+  },
+  {
+    id: "id2",
+    image: "images/products/umbrella.jpg",
+    name: "The Heaven Umbrella",
+    rating: {
+      stars: 4.5,
+      count: 5678
+    },
+    priceCents: 4999,
+    keywords: [
+      "umbrella",
+      "heaven",
+      "rain"
+    ]
   }
 ];
