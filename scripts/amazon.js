@@ -1,4 +1,4 @@
-import {cart, addToCart, calculateCartQuantity} from '../data/cart.js';
+import {cart} from '../data/cart-class.js';
 import {products} from '../data/products.js';
 import { formatCurrency } from './utils/money.js';
 
@@ -64,7 +64,7 @@ document.querySelector('.js-products-grid').
 innerHTML = productsHTML;
 
 export function updateCartQuantity() {
-  let cartQuantity = calculateCartQuantity();
+  let cartQuantity = cart.calculateCartQuantity();
 
   document.querySelector('.js-cart-quantity')
     .innerHTML = cartQuantity;
@@ -75,7 +75,7 @@ document.querySelectorAll('.js-add-to-cart')
     button.addEventListener('click', () => {
       const {productId} = button.dataset;
 
-      addToCart(productId);
+      cart.addToCart(productId);
 
       updateCartQuantity();
       
