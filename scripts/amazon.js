@@ -86,6 +86,9 @@ function renderProductsGrid() {
         const addedElement = document.querySelector(`.js-added-to-cart-${productId}`)
 
         addedElement.classList.add("showed-added-message");
+        setTimeout(() => {
+          addedElement.classList.remove("showed-added-message");
+        }, 1000);
       });
     });
 

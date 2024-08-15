@@ -45,6 +45,29 @@ export function addToCart(productId) {
     saveToStorage();
 }
 
+export function addToCartOnce(productId) {
+  let matchingItem;
+  const valueSelected = document.querySelector(`.js-quantity-selector-${productId}`);
+
+  cart.forEach((cartItem) => {
+    if(productId === cartItem.productId) {
+      matchingItem = cartItem;
+    }
+  });
+
+  if(matchingItem) {
+    matchingItem.quantity += 1;
+  } else {
+    cart.push({
+      productId,
+      quantity: 1,
+      deliveryOptionId: '1'
+    });
+  }
+
+    saveToStorage();
+}
+
 export function removeFromCart(productId) {
   const newCart = [];
 
